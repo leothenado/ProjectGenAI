@@ -9,7 +9,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-jarvis = genai.Client(api_key="MY_API")
+jarvis = genai.Client(api_key=st.secrets["MY_API"])"
 mychat = jarvis.chats.create(model = "gemini-flash-lite-latest") #to hold the history of conversation
 #Placeholder for the response
 response_placeholder = st.empty()
